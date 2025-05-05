@@ -4,15 +4,16 @@ body{
     overflow-x: hidden;
     overflow-y: hidden;
     padding: 0px;
-    margin:0px; 
+    margin:0px;
+    font-family: 'Inter', sans-serif;
+    background-color: rgb(241, 245, 255);
 }
 
 header {
     display: flex;
-    background-color: rgb(191, 253, 233);
     align-items: center;
     justify-content: center;
-    gap: 5%;
+    gap: 4%;
     width: 100%;
 }
 
@@ -22,8 +23,8 @@ div {
 }
 
 .imagem img {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
 }
 
 .container {
@@ -35,5 +36,35 @@ div {
 
 h1 {
     font-size: 60px;
-    font-family: Arial, Helvetica, sans-serif;
+    margin: 0%;
+}
+
+span {
+    color: rgb(120, 120, 255);
+}
+
+button {
+    padding: 15px;
+    font-size: large;
+    border: 0px;
+    border-radius: 10px;
+    background-color: rgb(31, 100, 205);
+    color: rgb(228, 231, 235);
+}
+
+.texto {
+    margin: 5% 0% 5% 0%;
+    font-size: 20px;
+}
+
+.botao {
+    display: flex;
+    gap: 10%;
+}
+
+.branco {
+    border: 3px solid;
+    border-color: rgb(31, 100, 205);
+    background-color: rgb(255, 255, 255);
+    color: rgb(31, 100, 205);
 }
