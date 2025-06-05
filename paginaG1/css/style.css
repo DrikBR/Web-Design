@@ -1,0 +1,74 @@
+:root {
+    --cor_menu: #C4160D;
+    --cor-texto_branco: #F9F9F9;
+    --cor_verde: #05A948;
+    --cor_azul: #0569DE;
+    --cor_laranja: #FF6701;
+    --cor_rosa: #FB0434;
+    --cor_azulescuro: #1D4C9A;
+    --cor_ciano: #016767;
+    
+}
+
+@font-face {
+    font-family: "Globo Cd Bd";
+    src: url("../fonts/Globo-Cd-Bd.ttf") format("truetype");
+    font-weight: bold;
+}
+
+body {
+    font-family: "Globo Cd Bd";
+}
+
+#boxflex {
+    background-color: var(--cor_menu);
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+    align-items: center;
+    color: var(--cor-texto_branco);
+}
+
+#logo-main {
+    height: 6%;
+    width: 6%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 1% 5px 1%;
+    align-items: center;
+    border-top: 1px solid black;
+    font-weight: bold;
+    font-size: large;
+}
+
+#denise {
+    width: 4%;
+    height: 4%;
+    border-radius: 50%;
+}
+
+#user {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1%;
+}
+
+#links {
+    display: flex;
+    white-space: nowrap;
+    gap: 7%;
+}
+
+a {text-decoration: none;}
+#l1 {color: var(--cor_azul);}
+#l2 {color: var(--cor_menu);}
+#l3 {color: var(--cor_verde);}
+#l4 {color: var(--cor_laranja);}
+#l5 {color: var(--cor_rosa);}
+#l6 {color: var(--cor_menu);}
+#l7 {color: var(--cor_azulescuro);}
+#l8 {color: var(--cor_ciano);}
