@@ -23,6 +23,7 @@ html, body {
     overflow-x: hidden;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+    background-color: rgb(240, 240, 240);
 }
 
 #boxflex {
@@ -54,6 +55,7 @@ header {
     border-top: 2px solid black;
     font-size: large;
     font-family: "Globo Cd Bd";
+    background-color: var(--cor-texto_branco);
 }
 
 #denise {
@@ -96,11 +98,12 @@ a {text-decoration: none;}
 #noticia1 {
     width: 46%;
     height: 56%;
-    border: 1px solid rgba(0, 0, 0, 0.103);
+    border: 1px solid rgba(0, 0, 0, 0.147);
     border-radius: 2%;
     padding: 2%;
     justify-content: space-between;
     padding-bottom: 7%;
+    background-color: var(--cor-texto_branco);
 }
 
 #noticia1, #noticia2, #noticia3 {
@@ -164,3 +167,11 @@ h1 {
 
 h2 {font-size: 175%; width: 85%;}
 #peixe {width: 80%;}
+
+@keyframes slidein {
+    from {background-size: cover;}
+    to {background-size: 130%;}
+}
+
+#noticia2:hover, #noticia3:hover{animation: slidein 0s forwards;}
+#menu:hover, h1:hover, .denise:hover, #noticia2:hover, #noticia3:hover {cursor: pointer;}
