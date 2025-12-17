@@ -40,4 +40,32 @@ function getLinks() {
     })
 }
 
-getLinks();
+function getLogin(e, s){
+    fetch("getlogin.php",
+
+      { 
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify( {email: e, senha: s})
+      } 
+    
+    )
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Erro ao carregar o arquivo: ' 
+                + response.statusText);
+        }
+        console.log( response )
+        return response.json();
+    })
+    .then(data => {
+        if(data.has != 0){
+            window.location = "perfil.html";
+        }else{
+            alert("Erro: perfil não encontrado");
+        }
+    })
+    .catch(error => {
+         console.log(error);
+    });
+}

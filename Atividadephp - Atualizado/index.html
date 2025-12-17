@@ -12,9 +12,9 @@
     
     <div id="login">
         <h2>Login</h2>
-        <form id="Login">
-            <label for="nomeU">Nome:</label>
-            <input type="text" id="nomeU" name="nomeU" required placeholder="Mara Luiza">
+        <form id="form">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required placeholder="mara@gmail.com">
             <br> <br>
             <label for="senha">Senha:</label>
             <input type="password" id="senha" name="senha" required placeholder="mara123">
@@ -24,13 +24,16 @@
     </div>
     
 </body>
-</html>
-
+<script src="script.js"></script>
 <script>
-    document.getElementById("Login").addEventListener("submit", function(e) {
-        e.preventDefault();
-        const formData = new FormData(this);
-        fetch("getlinks.php", {method: "POST", body: formData});
-        window.location.href = "perfil.html";
-    });
+
+form = document.getElementById("form");
+form.addEventListener("submit", function(e){
+    e.preventDefault();
+    email = document.getElementById("email");
+    senha = document.getElementById("senha");
+    getLogin(email.value, senha.value);
+});
+
 </script>
+</html>
